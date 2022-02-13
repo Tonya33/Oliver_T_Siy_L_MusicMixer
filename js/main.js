@@ -1,7 +1,6 @@
 (() => {
 	// collect the buttons at the bottom of the page
-	let theThumbnails = document.querySelectorAll("#buttonHolder img"),
-			gameBoard = document.querySelector(".puzzle-board"),
+	let gameBoard = document.querySelector(".puzzle-board"),
 			puzzlePieces = document.querySelectorAll(".puzzle-pieces *"),
 			dropZone = document.querySelectorAll(".drop-zone");
 
@@ -38,7 +37,6 @@
 	function turnAnchorOff(e) {
 		e.preventDefault();
 	}
-	theThumbnails.forEach(thumb => thumb.addEventListener("click", changeImgSet));
 
 	//listen for the drag event
 	puzzlePieces.forEach(piece => piece.addEventListener("dragstart", dragStarted));
