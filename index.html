@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Drag and Drop Puzzle Game</title>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header id="headLine">
+		<h1>Drag and Drop the kittles onto the stars to play music!</h1>
+		<p>PURRRR...</p>
+	</header>
+	<section id="game-boards">
+		<!-- these are the draggable pieces -->
+		<div class="puzzle-pieces">
+			<img id="topLeft" draggable="true" src="images/SVGs/ghost_kitty.svg" class="puzzle-image" alt="top left">
+			<img id="topRight" draggable="true" src="images/SVGs/flower_kitty.svg" class="puzzle-image" alt="top right">
+			<img id="bottomLeft" draggable="true" src="images/SVGs/egg_kitty.svg" class="puzzle-image" alt="bottom left">
+			<img id="bottomRight" draggable="true" src="images/SVGs/chef_kitty.svg" class="puzzle-image" alt="bottom right">
+		</div>
+
+		<!-- we want to drop the draggable pieces here -->
+		<div class="puzzle-board">
+			<div class="drop-zone tl"></div>
+			<div class="drop-zone tr"></div>
+			<div class="drop-zone bl"></div>
+			<div class="drop-zone br"></div>
+
+		</div>
+	</section>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
