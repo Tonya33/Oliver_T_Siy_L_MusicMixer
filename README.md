@@ -1,6 +1,4 @@
-
-<<<<<<< dev.to.updatingFiles
-# Tonya and Lil's Kitty Music Mixer
+# Tonya and Lil's Kitty Music Mixer🎶
 ===================================
 
 This project was completed by Lalaine ("Lil") Siy and Tonya Oliver. Lil has taken on the role of Graphic Designer. Tonya has taken on the role of the Front-End Developer. This is our First checkpoint progress for our project.
@@ -28,15 +26,3 @@ This is a simple drag and drop game. Pick a dressed up kitty and drop it over a 
 
 Tonya Oliver & Lalaine Siy of London, On
 =======
-### Tonya and LiL's Kitty Music Mixer 🎶
-
-## How to Use
-- Download our file and (I'm sorry I don't really know yet)
-
-## Notes
-- This is currently a work in progress! Come back soon :)
-
-## License
-
-- [MIT](LICENSE)
->>>>>>> main
