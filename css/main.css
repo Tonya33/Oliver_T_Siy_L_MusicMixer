@@ -96,21 +96,3 @@ header h1 {
 }
 
 header p, footer p { font-size: 1.7em; letter-spacing: 2px; margin: 10px 0 }
-
-
-#buttonHolder {
-	margin: 0px auto;
-	text-align:center;
-}
-
-#buttonHolder img {
-	margin-left: 5px;
-	margin-right: 5px;
-	border-radius: 20px;
-	border: thin solid #333;
-	cursor: pointer;
-}
-
-#buttonHolder img:hover {
-	opacity:.5;
-}
