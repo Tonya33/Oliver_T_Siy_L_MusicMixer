@@ -12,8 +12,11 @@ body {
 }
 
 #game-boards {
+	display: flex;
+	flex-direction: row;
 	width: 100%;
 	text-align: center;
+	justify-content: center;
   height: inherit;
 }
 
@@ -78,6 +81,16 @@ body {
 }
 .bl img{
 	right: 0;
+}
+.ResetButton {
+	background-color: #BB29BB;
+	font-size: 1.7em;
+	color: black;
+	align-items: center;
+	margin-left: 30px;
+	height:100px;
+	width:200px;
+
 }
 
 header {
