@@ -44,7 +44,7 @@ body {
 
 .puzzle-board {
 	width:400px;
-	background-image: url('../images/4stars.svg');
+	background-image: url('../images/4-star.svg');
 	background-repeat: no-repeat;
 }
 
