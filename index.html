@@ -13,10 +13,10 @@
 	</header>
 	<section id="game-boards">
 		<div class="puzzle-pieces">
-			<img id="topLeft" data-key="1" draggable="true" src="images/SVGs/ghost_kitty.svg" class="puzzle-image" alt="top left">
-			<img id="topRight" data-key="2" draggable="true" src="images/SVGs/flower_kitty.svg" class="puzzle-image" alt="top right">
-			<img id="bottomLeft" data-key="3" draggable="true" src="images/SVGs/egg_kitty.svg" class="puzzle-image" alt="bottom left">
-			<img id="bottomRight" data-key="4" draggable="true" src="images/SVGs/chef_kitty.svg" class="puzzle-image" alt="bottom right">
+			<img id="topLeft" data-bgref="0" draggable="true" src="images/SVGs/ghost_kitty.svg" class="puzzle-image" alt="top left">
+			<img id="topRight" data-bgref="1" draggable="true" src="images/SVGs/flower_kitty.svg" class="puzzle-image" alt="top right">
+			<img id="bottomLeft" data-bgref="2" draggable="true" src="images/SVGs/egg_kitty.svg" class="puzzle-image" alt="bottom left">
+			<img id="bottomRight" data-bgref="3" draggable="true" src="images/SVGs/chef_kitty.svg" class="puzzle-image" alt="bottom right">
 		</div>
 
 		<div class="puzzle-board">
@@ -28,11 +28,13 @@
 			<div class="ResetButton"><p>Reset<br>Kitties</p></div>
 	</section>
 
+<div class="audioElements">
 
-	<audio data-key"1" src="audio/enchanted-drums.mp3"></audio>
-	<audio data-key"2" src="audio/piano.mp3"></audio>
-	<audio data-key"3" src="audio/soul.mp3"></audio>
-	<audio data-key"4" src="audio/tribal.mp3"></audio>
+	<audio data-bgref"0" src="audio/enchanted-drums.mp3"></audio>
+	<audio data-bgref"1" src="audio/piano.mp3"></audio>
+	<audio data-bgref"2" src="audio/soul.mp3"></audio>
+	<audio data-bgref"3" src="audio/tribal.mp3"></audio>
+	</div>
 
 	<script src="js/main.js"></script>
 </body>

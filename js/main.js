@@ -1,8 +1,7 @@
 (() => {
-	let //puzzleBoard = document.querySelector(".puzzle-board"),
-			puzzlePieces = document.querySelectorAll(".puzzle-pieces *"),
+	let puzzlePieces = document.querySelectorAll(".puzzle-pieces *"),
 			dropZone = document.querySelectorAll(".drop-zone");
-			//audioElement = document.querySelector ("audio");
+			audioEl = document.querySelectorAll(".audio *");
 
 	const puzzlePaths = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
@@ -25,39 +24,26 @@
 
 		this.appendChild(document.querySelector(`#${droppedEl}`));
 	}
-	function turnAnchorOff(e) {
-		e.preventDefault();
-	}
-	//drag event ended
 
-	//This is my best attempt trying to get the music to play on dropped
-	function playAudio(event) {
+	function playAudio(e) {
 		debugger;
 		event.preventDefault();
-    let audioElement = event.dataTransfer.getData(`audio[data-key="${event.keyCode}"]`);
-		if (!audioElement) { return; }
-		let activeElement = document.querySelector(`img[data-key="${event.keyCode}"`);
-    puzzlePieces.classList.add('playing');
-    audioElement.play();
-  }
-//this is another attempt-I was planning on changing data-key to data track ref and trying to work with those.
-	/*function playAudio (event) {
-		event.preventDefault();
-		console.log("audio played");
-		audioElement.src = `audio/${this.dataset.trackref}.mp3`)
-		audioElement.play();
-	}*/
+		let currentTrack = `audio/${this.dataset.trackref}.mp3`;
+    audioEL.src = currentTrack;
+    playTrack();
+	}
+	function playTrack() {
+		audioEL.play(); }
 
 	puzzlePieces.forEach(piece => {
 		piece.addEventListener("dragstart", dragStarted);
-	});
+		piece.addEventListener("ondragend", playAudio);
 
-	/*I'm not sure if I am suppose to listen for the drop in the dropZone OR listen for the drop of the puzzle pieces*/
+	});
 
 	dropZone.forEach(zone => {
 		zone.addEventListener("dragover", allowDragOver);
 		zone.addEventListener("drop", allowDrop);
-		zone.addEventListener("drop", playAudio);
 	});
 
 
