@@ -9,12 +9,14 @@
 	function dragStarted(event) {
 		console.log('started dragging a piece');
 		event.dataTransfer.setData('currentItem', event.target.id);
+		event.dataTransfer.setData('currentTrack', event.target.dataset.bgref);
 	}
 
 	function allowDragOver(event) {
 		event.preventDefault();
 		console.log('dragged over me');
 	}
+
 	function allowDrop(event) {
 		event.preventDefault();
 		console.log('dropped on me');
@@ -23,21 +25,14 @@
 		console.log("droppedEl");
 
 		this.appendChild(document.querySelector(`#${droppedEl}`));
-	}
 
-	function playAudio(e) {
-		debugger;
-		event.preventDefault();
-		let currentTrack = `audio/${this.dataset.trackref}.mp3`;
-    audioEL.src = currentTrack;
-    playTrack();
+		let targetTrack =  event.dataTransfer.getData('currentTrack');
+
+		document.querySelector(`audio[data-bgref="${targetTrack}"]`).play();
 	}
-	function playTrack() {
-		audioEL.play(); }
 
 	puzzlePieces.forEach(piece => {
 		piece.addEventListener("dragstart", dragStarted);
-		piece.addEventListener("ondragend", playAudio);
 
 	});
 
