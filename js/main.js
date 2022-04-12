@@ -1,7 +1,9 @@
 (() => {
 	let puzzlePieces = document.querySelectorAll(".puzzle-pieces *"),
-			dropZone = document.querySelectorAll(".drop-zone");
-			audioEl = document.querySelectorAll(".audio *");
+			dropZone = document.querySelectorAll(".drop-zone"),
+			resetBtn = document.querySelector(".ResetButton"),
+			dragArea = document.querySelector(".puzzle-pieces"),
+			audioEl = document.querySelectorAll("audio");
 
 	const puzzlePaths = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
@@ -31,6 +33,15 @@
 		document.querySelector(`audio[data-bgref="${targetTrack}"]`).play();
 	}
 
+	function resetKitties() {
+		dropZone.forEach(zone => {
+			if (zone.children.length > 0) {
+					dragArea.appendChild(zone.firstElementChild);
+			}
+		})
+		audioEl.forEach(el => el.pause(););
+	}
+
 	puzzlePieces.forEach(piece => {
 		piece.addEventListener("dragstart", dragStarted);
 
@@ -40,6 +51,8 @@
 		zone.addEventListener("dragover", allowDragOver);
 		zone.addEventListener("drop", allowDrop);
 	});
+
+	resetBtn.addEventListener("click", resetKitties);
 
 
 })();
